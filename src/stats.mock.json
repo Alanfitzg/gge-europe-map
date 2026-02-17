@@ -1,0 +1,1208 @@
+{
+  "benelux": {
+    "regionId": "benelux",
+    "name": "Benelux",
+    "kpis": {
+      "clubs": 16,
+      "countries": 4,
+      "calendarEvents": 22,
+      "tournaments": 17
+    },
+    "notes": [
+      "16 clubs across Netherlands, Belgium, Luxembourg & 6 German clubs",
+      "Home to some of the oldest GAA clubs in continental Europe",
+      "Administrative heartland of GGE — hosts the majority of European championships",
+      "Full Benelux 15s Football championship season (QF → SF → Finals)",
+      "Sports covered: Football, LGFA, Hurling, Camogie, 15s, G4MO, Youth"
+    ],
+    "spotlight": {
+      "title": "Amsterdam GAC",
+      "crest": "assets/amsterdam-gac-crest.png",
+      "flag": "\ud83c\uddf3\ud83c\uddf1",
+      "accolade": "Leinster Hurling champions",
+      "description": "Amsterdam GAC made history by winning the Leinster Hurling championship — a remarkable achievement for a continental European club competing against established Irish county teams. It underlines the growing standard of hurling in the Benelux and the depth of talent in the region.",
+      "stats": [
+        "Leinster Hurling winners",
+        "Based in Amsterdam",
+        "Dual-code club"
+      ]
+    },
+    "spotlights": [
+      {
+        "title": "Europe's oldest clubs",
+        "flag": "\ud83c\uddea\ud83c\uddfa",
+        "accolade": "Where it all began",
+        "description": "The Benelux is home to some of the oldest GAA clubs on the European continent. Clubs like An Craobh Rua in Brussels and Amsterdam GAC have been established for decades, laying the foundations for the organised structures that GGE now operates across the continent.",
+        "stats": [
+          "Decades of GAA tradition",
+          "Foundational clubs for GGE",
+          "Brussels & Amsterdam pioneers"
+        ]
+      }
+    ],
+    "byCountry": [
+      {
+        "country": "Netherlands",
+        "flag": "\ud83c\uddf3\ud83c\uddf1",
+        "clubCount": 6,
+        "clubs": [
+          { "name": "Amsterdam GAC", "location": "Amsterdam" },
+          { "name": "Maastricht Gaels", "location": "Maastricht" },
+          { "name": "CLG Den Haag", "location": "The Hague" },
+          { "name": "Eindhoven Shamrocks GAA", "location": "Eindhoven" },
+          { "name": "Groningen Gaels", "location": "Groningen" },
+          { "name": "Nijmegen GFC", "location": "Nijmegen" }
+        ]
+      },
+      {
+        "country": "Belgium",
+        "flag": "\ud83c\udde7\ud83c\uddea",
+        "clubCount": 3,
+        "clubs": [
+          { "name": "An Craobh Rua", "location": "Brussels" },
+          { "name": "EC Brussels Youth", "location": "Brussels" },
+          { "name": "Earls of Leuven", "location": "Leuven" }
+        ]
+      },
+      {
+        "country": "Luxembourg",
+        "flag": "\ud83c\uddf1\ud83c\uddfa",
+        "clubCount": 1,
+        "clubs": [
+          { "name": "Gaelic Sports Club Luxembourg", "location": "Luxembourg" }
+        ]
+      },
+      {
+        "country": "Germany",
+        "flag": "\ud83c\udde9\ud83c\uddea",
+        "clubCount": 6,
+        "clubs": [
+          { "name": "Cologne Celtics", "location": "Cologne" },
+          { "name": "Eintracht Frankfurt GAA", "location": "Frankfurt" },
+          { "name": "Dusseldorf GFC", "location": "D\u00fcsseldorf" },
+          { "name": "Aachen Gaels", "location": "Aachen" },
+          { "name": "Darmstadt GAA", "location": "Darmstadt" },
+          { "name": "Hamburg GAA", "location": "Hamburg" }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "title": "Football Development Tournament (11s)",
+        "type": "TOURNAMENT",
+        "date": "2026-02-21",
+        "location": "Leuven",
+        "host": "Earls of Leuven",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Den Haag Invitational",
+        "type": "TOURNAMENT",
+        "date": "2026-03-12",
+        "location": "The Hague",
+        "host": "CLG Den Haag",
+        "sports": ["Mens Football", "LGFA"],
+        "isMajor": false
+      },
+      {
+        "title": "Benelux Regional Football Championships (11s) — Rd 1",
+        "type": "TOURNAMENT",
+        "date": "2026-03-21",
+        "location": "Maastricht",
+        "host": "Maastricht Gaels",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Benelux Regional Camogie & Hurling Championships (7s/9s)",
+        "type": "TOURNAMENT",
+        "date": "2026-03-28",
+        "location": "The Hague",
+        "host": "CLG Den Haag",
+        "sports": ["Hurling", "Camogie"],
+        "isMajor": false
+      },
+      {
+        "title": "European Collegiate Football Championships",
+        "type": "TOURNAMENT",
+        "date": "2026-05-02",
+        "location": "Leuven",
+        "host": "Earls of Leuven",
+        "sports": ["Mens Football"],
+        "isMajor": true
+      },
+      {
+        "title": "European 'Feile' Youth Football Championships",
+        "type": "TOURNAMENT",
+        "date": "2026-05-02",
+        "location": "Maastricht",
+        "host": "Maastricht Gaels",
+        "sports": ["Youth", "Mens Football"],
+        "isMajor": true
+      },
+      {
+        "title": "European Camogie/Hurling (9s) Championships — Rd 1",
+        "type": "TOURNAMENT",
+        "date": "2026-05-02",
+        "location": "Eindhoven",
+        "host": "Eindhoven Shamrocks GAA",
+        "sports": ["Hurling", "Camogie"],
+        "isMajor": true
+      },
+      {
+        "title": "Luxembourg Invitational",
+        "type": "TOURNAMENT",
+        "date": "2026-05-30",
+        "location": "Luxembourg",
+        "host": "Gaelic Sports Club Luxembourg",
+        "sports": [],
+        "isMajor": false
+      },
+      {
+        "title": "Benelux 15s Football Championships — Quarter-Finals",
+        "type": "TOURNAMENT",
+        "date": "2026-06-13",
+        "location": "Maastricht",
+        "host": "Maastricht Gaels",
+        "sports": ["15s Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Benelux 15s Football Championships — Semi-Finals",
+        "type": "TOURNAMENT",
+        "date": "2026-06-20",
+        "location": "Maastricht",
+        "host": "Maastricht Gaels",
+        "sports": ["15s Football"],
+        "isMajor": false
+      },
+      {
+        "title": "G4MO — Mothers and Others Invitational",
+        "type": "TOURNAMENT",
+        "date": "2026-07-11",
+        "location": "Leuven",
+        "host": "Earls of Leuven",
+        "sports": ["G4MO"],
+        "isMajor": false
+      },
+      {
+        "title": "Benelux 15s Football Championships — Finals",
+        "type": "TOURNAMENT",
+        "date": "2026-08-22",
+        "location": "Maastricht",
+        "host": "Maastricht Gaels",
+        "sports": ["15s Football"],
+        "isMajor": true
+      },
+      {
+        "title": "Benelux 15s Camogie & Hurling Championships",
+        "type": "TOURNAMENT",
+        "date": "2026-08-29",
+        "location": "Maastricht",
+        "host": "Maastricht Gaels",
+        "sports": ["15s Hurling", "Camogie"],
+        "isMajor": false
+      },
+      {
+        "title": "Leuven Invitational",
+        "type": "TOURNAMENT",
+        "date": "2026-09-10",
+        "location": "Leuven",
+        "host": "Earls of Leuven",
+        "sports": [],
+        "isMajor": false
+      },
+      {
+        "title": "European Premier Camogie/Hurling Championships (15s)",
+        "type": "TOURNAMENT",
+        "date": "2026-09-19",
+        "location": "Maastricht",
+        "host": "Maastricht Gaels",
+        "sports": ["15s Hurling", "Camogie"],
+        "isMajor": true
+      },
+      {
+        "title": "European Camogie/Hurling (9s) Championships — Rd 4",
+        "type": "TOURNAMENT",
+        "date": "2026-10-03",
+        "location": "Amsterdam",
+        "host": "Amsterdam GAC",
+        "sports": ["Hurling", "Camogie"],
+        "isMajor": true
+      },
+      {
+        "title": "'Pan-Euros' European Football Championships (11s)",
+        "type": "TOURNAMENT",
+        "date": "2026-10-17",
+        "location": "Lyon",
+        "host": "Maastricht Gaels",
+        "sports": ["Mens Football"],
+        "isMajor": true
+      }
+    ]
+  },
+  "central-east": {
+    "regionId": "central-east",
+    "name": "Central East",
+    "kpis": {
+      "clubs": 31,
+      "countries": 10,
+      "calendarEvents": 15,
+      "tournaments": 12
+    },
+    "notes": [
+      "Largest GGE region \u2014 31 clubs across 10 countries",
+      "Germany leads with 12 clubs including 2 in Berlin",
+      "Full Central East Football championship season: Apr\u2013Sep 2026",
+      "European Camogie/Hurling Championships Rd 3 hosted in Vienna",
+      "GGE Convention hosted by Rome Hibernia (Nov 2026)"
+    ],
+    "spotlight": {
+      "title": "Berlin GAA",
+      "accolade": "Dual-code powerhouse",
+      "crest": "assets/central-east-crest.png",
+      "description": "Berlin GAA is a cornerstone of the Central East region, hosting both the German Camogie & Hurling Cup and Central East Football rounds. Setanta Berlin has built a vibrant youth pathway \u2014 its youth section is now being coached by graduates of the programme, a testament to the club\u2019s long-term development model. With two clubs active in the city, Berlin has become a dual-code hub driving growth in Gaelic games across Central Europe.",
+      "stats": [
+        "Hosting German Camogie & Hurling Cup",
+        "Central East Football host",
+        "G4MO Invitational host",
+        "Setanta youth pathway"
+      ]
+    },
+    "spotlights": [
+      {
+        "title": "Germany GAA",
+        "crest": "assets/germany-gaa-crest.png",
+        "accolade": "Own governing body",
+        "description": "Germany has its own GAA governing body \u2014 a unique distinction in European Gaelic games. Due to the size of the country and the geographic spread of its 12 clubs, German clubs compete in both the Benelux and Central East regional championships, ensuring competitive opportunities across the board.",
+        "stats": [
+          "12 clubs nationwide",
+          "Dual-region competition",
+          "Independent governing body"
+        ]
+      }
+    ],
+    "byCountry": [
+      {
+        "country": "Germany",
+        "flag": "\ud83c\udde9\ud83c\uddea",
+        "clubCount": 12,
+        "clubs": [
+          { "name": "Munich GAA", "location": "Munich" },
+          { "name": "Berlin GAA", "location": "Berlin" },
+          { "name": "Setanta Berlin GAA", "location": "Berlin" },
+          { "name": "Cologne Celtics", "location": "Cologne" },
+          { "name": "Eintracht Frankfurt GAA", "location": "Frankfurt" },
+          { "name": "Hamburg GAA", "location": "Hamburg" },
+          { "name": "Stuttgart GAA", "location": "Stuttgart" },
+          { "name": "Dresden Hurling", "location": "Dresden" },
+          { "name": "Dusseldorf GFC", "location": "D\u00fcsseldorf" },
+          { "name": "Darmstadt GAA", "location": "Darmstadt" },
+          { "name": "Aachen Gaels", "location": "Aachen" },
+          {
+            "name": "R\u00f3mh\u00e1naigh Augsburg \u00d3g",
+            "location": "Augsburg"
+          }
+        ]
+      },
+      {
+        "country": "Switzerland",
+        "flag": "\ud83c\udde8\ud83c\udded",
+        "clubCount": 5,
+        "clubs": [
+          { "name": "Zurich GAA", "location": "Zurich" },
+          { "name": "Geneva Gaels", "location": "Geneva" },
+          { "name": "Basel GAA", "location": "Basel" },
+          { "name": "Bern GAA", "location": "Bern" },
+          { "name": "Midland GAC", "location": "Switzerland" }
+        ]
+      },
+      {
+        "country": "Poland",
+        "flag": "\ud83c\uddf5\ud83c\uddf1",
+        "clubCount": 4,
+        "clubs": [
+          { "name": "Cumann Warszawa GAA", "location": "Warsaw" },
+          { "name": "\u00c9ire \u00d3g Wroclaw", "location": "Wroclaw" },
+          { "name": "Bydgoszcz CLG", "location": "Bydgoszcz" },
+          { "name": "Olsztyn Gaels", "location": "Olsztyn" }
+        ]
+      },
+      {
+        "country": "Italy",
+        "flag": "\ud83c\uddee\ud83c\uddf9",
+        "clubCount": 2,
+        "clubs": [
+          { "name": "Sant'Ambrogio Milano GAC", "location": "Milan" },
+          { "name": "Rome Hibernia GAA", "location": "Rome" }
+        ]
+      },
+      {
+        "country": "Austria",
+        "flag": "\ud83c\udde6\ud83c\uddf9",
+        "clubCount": 2,
+        "clubs": [
+          { "name": "Vienna Gaels GAA", "location": "Vienna" },
+          { "name": "Salzburg GAA", "location": "Salzburg" }
+        ]
+      },
+      {
+        "country": "Czech Republic",
+        "flag": "\ud83c\udde8\ud83c\uddff",
+        "clubCount": 2,
+        "clubs": [
+          { "name": "Prague Hibernians", "location": "Prague" },
+          {
+            "name": "P\u00edobair\u00ed Strakonice GAC",
+            "location": "Strakonice"
+          }
+        ]
+      },
+      {
+        "country": "Croatia",
+        "flag": "\ud83c\udded\ud83c\uddf7",
+        "clubCount": 1,
+        "clubs": [{ "name": "Croatian Celts", "location": "Zagreb" }]
+      },
+      {
+        "country": "Hungary",
+        "flag": "\ud83c\udded\ud83c\uddfa",
+        "clubCount": 1,
+        "clubs": [{ "name": "Budapest Gaels", "location": "Budapest" }]
+      },
+      {
+        "country": "Estonia",
+        "flag": "\ud83c\uddea\ud83c\uddea",
+        "clubCount": 1,
+        "clubs": [{ "name": "Tallinn GAA", "location": "Tallinn" }]
+      },
+      {
+        "country": "Slovakia",
+        "flag": "\ud83c\uddf8\ud83c\uddf0",
+        "clubCount": 1,
+        "clubs": [{ "name": "Slovak Shamrocks", "location": "Bratislava" }]
+      }
+    ],
+    "events": [
+      {
+        "title": "The 4th Annual Cormac Cup",
+        "type": "TOURNAMENT",
+        "date": "2026-02-28",
+        "location": "Rome",
+        "host": "Rome Hibernia GAA",
+        "sports": ["Mens Football", "LGFA"],
+        "isMajor": false
+      },
+      {
+        "title": "Cologne Invitational",
+        "type": "TOURNAMENT",
+        "date": "2026-03-14",
+        "location": "Cologne",
+        "host": "Cologne Celtics",
+        "sports": ["Football"],
+        "isMajor": false
+      },
+      {
+        "title": "German Camogie & Hurling Cup",
+        "type": "TOURNAMENT",
+        "date": "2026-04-11",
+        "location": "Berlin",
+        "host": "Berlin GAA",
+        "sports": ["Hurling", "Camogie"],
+        "isMajor": false
+      },
+      {
+        "title": "Central East Football \u2014 Round 1",
+        "type": "TOURNAMENT",
+        "date": "2026-04-18",
+        "location": "Zurich",
+        "host": "Zurich GAA",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Central East Football \u2014 Round 2",
+        "type": "TOURNAMENT",
+        "date": "2026-05-23",
+        "location": "Prague",
+        "host": "Prague Hibernians",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "G4MO Invitational Munich",
+        "type": "TOURNAMENT",
+        "date": "2026-06-13",
+        "location": "Munich",
+        "host": "Munich GAA",
+        "sports": ["G4MO"],
+        "isMajor": false
+      },
+      {
+        "title": "Central East Football \u2014 Round 3",
+        "type": "TOURNAMENT",
+        "date": "2026-06-20",
+        "location": "Berlin",
+        "host": "Berlin GAA",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "G4MO Invitational Berlin",
+        "type": "TOURNAMENT",
+        "date": "2026-08-08",
+        "location": "Berlin",
+        "host": "Berlin GAA",
+        "sports": ["G4MO"],
+        "isMajor": false
+      },
+      {
+        "title": "European Camogie/Hurling (9s) Championships \u2014 Rd 3",
+        "type": "TOURNAMENT",
+        "date": "2026-09-05",
+        "location": "Vienna",
+        "host": "Vienna Gaels GAA",
+        "sports": ["Hurling", "Camogie"],
+        "isMajor": true
+      },
+      {
+        "title": "Central East Football \u2014 Final Round",
+        "type": "TOURNAMENT",
+        "date": "2026-09-19",
+        "location": "TBC",
+        "host": "Zurich GAA",
+        "sports": ["Mens Football", "LGFA"],
+        "isMajor": true
+      },
+      {
+        "title": "GGE Convention 2026",
+        "type": "SOCIAL",
+        "date": "2026-11-28",
+        "location": "TBC",
+        "host": "Rome Hibernia GAA",
+        "sports": [],
+        "isMajor": true
+      }
+    ]
+  },
+  "france": {
+    "regionId": "france",
+    "name": "France",
+    "kpis": {
+      "clubs": 33,
+      "countries": 3,
+      "calendarEvents": 37,
+      "tournaments": 7
+    },
+    "notes": [
+      "33 clubs across France, Jersey & Guernsey",
+      "Full federal championship structure: D1, D2 Men's and Ladies",
+      "Brittany runs its own regional league system (D1, D2/D3)",
+      "Sports covered: Football, LGFA, Hurling, 15s, Handball",
+      "Hosting European Premier 15-a-side Finals in Rennes (Aug 2026)"
+    ],
+    "spotlight": {
+      "title": "France GAA",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "accolade": "Largest GGE region — 95% French",
+      "description": "France is GGE's largest region by membership — and roughly 95% of its players are French nationals. It operates one of the most developed domestic league systems in European Gaelic games, with D1 and D2 Men's Federal championships, a full Ladies championship, national Hurling selection weekends, and its own Cup competition (Coupe Fédérale). The French Finals in Clermont cap the season each June.",
+      "stats": [
+        "GGE's largest region by members",
+        "~95% French nationals",
+        "D1 & D2 Federal leagues",
+        "Coupe Fédérale"
+      ]
+    },
+    "spotlights": [
+      {
+        "title": "Brittany GAA",
+        "flag": "\ud83c\uddeb\ud83c\uddf7",
+        "accolade": "Regional league powerhouse",
+        "description": "Brittany has its own standalone GAA league — the Brittany GAA League — with D1, D2/D3 tiers and a cup competition, all coordinated by Gwenn Rann GAA. With multiple clubs in Saint-Brieuc, Rennes, Brest, Vannes, and Lorient, Brittany is the heartland of French GAA and a model for regional development across Europe.",
+        "stats": [
+          "Own D1, D2/D3 league tiers",
+          "Brittany Cup competition",
+          "6+ active clubs in the region"
+        ]
+      }
+    ],
+    "byCountry": [
+      {
+        "country": "France",
+        "flag": "\ud83c\uddeb\ud83c\uddf7",
+        "clubCount": 31,
+        "clubs": [
+          { "name": "Paris Gaels", "location": "Paris" },
+          { "name": "Rennes GAA – Ar Gwazi Gouez", "location": "Rennes" },
+          { "name": "Nantes GAA", "location": "Nantes" },
+          { "name": "Lugdunum CLG", "location": "Lyon" },
+          { "name": "Bordeaux Gaelic Football", "location": "Bordeaux" },
+          { "name": "Strasbourg Gaels", "location": "Strasbourg" },
+          { "name": "Tolosa Gaelic Football Club", "location": "Toulouse" },
+          { "name": "Lille GAA", "location": "Lille" },
+          { "name": "Clermont Gaels", "location": "Clermont" },
+          { "name": "Anjou Gaels", "location": "Angers" },
+          { "name": "Le Mans Gaels", "location": "Le Mans" },
+          { "name": "Montpellier GAA", "location": "Montpellier" },
+          { "name": "Azur Gaels", "location": "Valbonne" },
+          { "name": "GF Prouvenço", "location": "Aix-en-Provence" },
+          { "name": "Niort Gaels", "location": "Niort" },
+          { "name": "Poitiers Gaels", "location": "Poitiers" },
+          { "name": "Gwenn Rann GAA", "location": "Brittany" },
+          { "name": "St. Brieuc GAA", "location": "St. Brieuc" },
+          {
+            "name": "Gaelic Football Bro Sant Brieg",
+            "location": "Saint-Brieuc"
+          },
+          { "name": "Brest GAA", "location": "Brest" },
+          { "name": "Gwened Vannes", "location": "Vannes" },
+          { "name": "Lorient GAC", "location": "Lorient" },
+          { "name": "Kerne Football Gaélique", "location": "Quimper" },
+          { "name": "Kerne GAA", "location": "Quimper" },
+          { "name": "Rosteren GAA", "location": "Brittany" },
+          { "name": "Goélands Gaëlics St. Coulomb", "location": "St. Coulomb" },
+          { "name": "U.S. Liffre/Liverieg", "location": "Liffre" },
+          { "name": "Mondeville GAA", "location": "Mondeville" },
+          { "name": "Gaelic Football Club d'Arthon", "location": "Arthon" },
+          { "name": "Pas-en-Artois", "location": "Pas-en-Artois" },
+          { "name": "France GAA", "location": "France" }
+        ]
+      },
+      {
+        "country": "Jersey",
+        "flag": "\ud83c\uddef\ud83c\uddea",
+        "clubCount": 1,
+        "clubs": [
+          { "name": "Jersey Irish", "location": "Jersey, Channel Islands" }
+        ]
+      },
+      {
+        "country": "Guernsey",
+        "flag": "\ud83c\uddec\ud83c\uddec",
+        "clubCount": 1,
+        "clubs": [
+          { "name": "Guernsey Gaels", "location": "Guernsey, Channel Islands" }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "title": "Brittany GAA League — Round 1",
+        "type": "FIXTURE",
+        "date": "2026-01-17",
+        "location": "Brittany",
+        "host": "Gwenn Rann GAA",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Brittany LGFA League — Round 1",
+        "type": "FIXTURE",
+        "date": "2026-01-24",
+        "location": "Brittany",
+        "host": "Gwenn Rann GAA",
+        "sports": ["LGFA"],
+        "isMajor": false
+      },
+      {
+        "title": "Hurling Tournament",
+        "type": "TOURNAMENT",
+        "date": "2026-01-31",
+        "location": "Clermont",
+        "host": "Clermont Gaels",
+        "sports": ["Hurling"],
+        "isMajor": false
+      },
+      {
+        "title": "Fédéral Ladies — Round 1",
+        "type": "FIXTURE",
+        "date": "2026-02-07",
+        "location": "Paris",
+        "host": "Paris Gaels",
+        "sports": ["LGFA"],
+        "isMajor": false
+      },
+      {
+        "title": "D1 Men's Federal — Round 1",
+        "type": "FIXTURE",
+        "date": "2026-02-21",
+        "location": "Lyon",
+        "host": "Lugdunum CLG",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "D2 Men's Federal — Round 1",
+        "type": "FIXTURE",
+        "date": "2026-02-21",
+        "location": "Lyon",
+        "host": "Lugdunum CLG",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Fédéral Ladies — Round 2",
+        "type": "FIXTURE",
+        "date": "2026-03-07",
+        "location": "Agen",
+        "host": "France GAA",
+        "sports": ["LGFA"],
+        "isMajor": false
+      },
+      {
+        "title": "France Hurling Selection — Weekend 3",
+        "type": "TOURNAMENT",
+        "date": "2026-03-14",
+        "location": "France",
+        "host": "France GAA",
+        "sports": ["Hurling"],
+        "isMajor": false
+      },
+      {
+        "title": "Vannes Tournament",
+        "type": "TOURNAMENT",
+        "date": "2026-03-14",
+        "location": "Vannes",
+        "host": "Gwened Vannes",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "D1 Men's Federal — Round 2",
+        "type": "FIXTURE",
+        "date": "2026-03-21",
+        "location": "Strasbourg",
+        "host": "Strasbourg Gaels",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "D2 Men's Federal — Round 2",
+        "type": "FIXTURE",
+        "date": "2026-03-21",
+        "location": "Angers",
+        "host": "Anjou Gaels",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Brittany GAA League D1 — Round 1",
+        "type": "FIXTURE",
+        "date": "2026-03-21",
+        "location": "Brittany",
+        "host": "Gwenn Rann GAA",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "French Ladies Championships — Round 1",
+        "type": "FIXTURE",
+        "date": "2026-04-04",
+        "location": "Lorient",
+        "host": "Lorient GAC",
+        "sports": ["LGFA"],
+        "isMajor": false
+      },
+      {
+        "title": "D1 Men's Federal — Round 3",
+        "type": "FIXTURE",
+        "date": "2026-04-11",
+        "location": "Toulouse",
+        "host": "Tolosa Gaelic Football Club",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "D2 Men's Federal — Round 3",
+        "type": "FIXTURE",
+        "date": "2026-04-18",
+        "location": "Bordeaux",
+        "host": "Bordeaux Gaelic Football",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "French Ladies Championships — Round 2",
+        "type": "FIXTURE",
+        "date": "2026-04-25",
+        "location": "Le Havre",
+        "host": "France GAA",
+        "sports": ["LGFA"],
+        "isMajor": false
+      },
+      {
+        "title": "Coupe Fédérale (open to D1 and D2)",
+        "type": "FIXTURE",
+        "date": "2026-05-16",
+        "location": "Arthon",
+        "host": "Gaelic Football Club d'Arthon",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "France Hurling Selection",
+        "type": "TOURNAMENT",
+        "date": "2026-05-16",
+        "location": "France",
+        "host": "France GAA",
+        "sports": ["Hurling"],
+        "isMajor": false
+      },
+      {
+        "title": "Super 15s (15-a-side competition)",
+        "type": "TOURNAMENT",
+        "date": "2026-05-23",
+        "location": "Rennes",
+        "host": "Rennes GAA – Ar Gwazi Gouez",
+        "sports": ["15s Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Brittany GAA Cup",
+        "type": "FIXTURE",
+        "date": "2026-05-30",
+        "location": "Brittany",
+        "host": "Gwenn Rann GAA",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "France Men's Selection",
+        "type": "TOURNAMENT",
+        "date": "2026-06-06",
+        "location": "France",
+        "host": "France GAA",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "French Finals",
+        "type": "TOURNAMENT",
+        "date": "2026-06-20",
+        "location": "Clermont",
+        "host": "France GAA",
+        "sports": [],
+        "isMajor": true
+      },
+      {
+        "title": "Open Paris",
+        "type": "TOURNAMENT",
+        "date": "2026-06-27",
+        "location": "Paris",
+        "host": "Paris Gaels",
+        "sports": [],
+        "isMajor": false
+      },
+      {
+        "title": "France Women's Selection — Weekend 3",
+        "type": "TOURNAMENT",
+        "date": "2026-06-27",
+        "location": "France",
+        "host": "France GAA",
+        "sports": ["LGFA"],
+        "isMajor": false
+      },
+      {
+        "title": "One-Wall Handball",
+        "type": "TOURNAMENT",
+        "date": "2026-07-04",
+        "location": "Paris",
+        "host": "Paris Gaels",
+        "sports": ["Handball"],
+        "isMajor": false
+      },
+      {
+        "title": "European Premier 15-a-side Finals",
+        "type": "TOURNAMENT",
+        "date": "2026-08-23",
+        "location": "Rennes",
+        "host": "Rennes GAA – Ar Gwazi Gouez",
+        "sports": ["Mens Football", "LGFA"],
+        "isMajor": true
+      }
+    ]
+  },
+  "iberia": {
+    "regionId": "iberia",
+    "name": "Iberia",
+    "kpis": {
+      "clubs": 31,
+      "countries": 3,
+      "calendarEvents": 72,
+      "tournaments": 10
+    },
+    "notes": [
+      "31 clubs across Spain, Portugal & Gibraltar",
+      "Galicia runs a full Men's and Ladies league (Liga Galega) with ~14 clubs",
+      "Iberia Championship circuit: Gibraltar, Lisbon, Malaga, Barcelona",
+      "Galicia has its own national team selection and youth pathway",
+      "World Games 2026 participation planned"
+    ],
+    "spotlight": {
+      "title": "Galicia GAA",
+      "flag": "\ud83c\uddea\ud83c\uddf8",
+      "accolade": "Europe's Celtic heartland",
+      "description": "Galicia is the powerhouse of Iberian GAA — and arguably the most remarkable GAA sub-region in all of Europe. With ~14 clubs, a full Liga Galega for both Men's and Ladies, its own national team selection, a Galician Cup, a Celtic Cup, youth competitions including a Schools Cup and U-17 Celtic Cup, and plans for Award One coaching courses, Galicia has built a self-sustaining GAA ecosystem rooted in its Celtic cultural identity.",
+      "stats": [
+        "~14 clubs in Galicia alone",
+        "Liga Galega Men's & Ladies",
+        "Own national team selection",
+        "Youth & Schools pathway"
+      ]
+    },
+    "spotlights": [
+      {
+        "title": "Iberia Championship",
+        "flag": "\ud83c\uddea\ud83c\uddf8",
+        "accolade": "Peninsula-wide competition",
+        "description": "The Iberia Championship is a multi-round circuit spanning the entire peninsula — with rounds hosted in Gibraltar, Lisbon, Malaga, and Barcelona. It brings together clubs from across Spain and Portugal, with the Iberian Finals hosted by Barcelona Gaels in Salou each May.",
+        "stats": [
+          "Gibraltar, Lisbon, Malaga, Barcelona",
+          "Iberian Finals in Salou",
+          "GAA & LGFA competitions"
+        ]
+      }
+    ],
+    "byCountry": [
+      {
+        "country": "Spain",
+        "flag": "\ud83c\uddea\ud83c\uddf8",
+        "clubCount": 28,
+        "clubs": [
+          { "name": "Keltoi Vigo", "location": "Vigo" },
+          { "name": "Fillos de Breog\u00e1n", "location": "A Coru\u00f1a" },
+          { "name": "Estrela Vermelha", "location": "Boqueix\u00f3n" },
+          { "name": "Turonia GFG", "location": "Gondomar" },
+          { "name": "Lorchos FG", "location": "Boiro" },
+          { "name": "Grovias", "location": "A Guarda" },
+          { "name": "Lavandeiras de San Sim\u00f3n", "location": "Vigo" },
+          { "name": "Lume de Beltane", "location": "Poio" },
+          { "name": "Auriense Gaelic Football", "location": "Ourense" },
+          { "name": "Cambados Gaelico", "location": "Cambados" },
+          { "name": "Herdeiros de Dhais", "location": "Galicia" },
+          { "name": "Dorna GAA", "location": "Galicia" },
+          { "name": "Lugh GAA", "location": "Galicia" },
+          { "name": "Irmamdinhos da Estrada", "location": "Galicia" },
+          { "name": "Barcelona Gaels", "location": "Barcelona" },
+          { "name": "Ga\u00e9licos do Gran Sol", "location": "Barcelona" },
+          { "name": "Madrid Harps GAA", "location": "Madrid" },
+          { "name": "Celtic Tres Cantos", "location": "Madrid" },
+          { "name": "Tolosa Gaels", "location": "Basque Country" },
+          { "name": "St. Patrick's Gasteiz", "location": "Basque Country" },
+          { "name": "Bilbao Gaels", "location": "Bilbao" },
+          { "name": "San Vicent Valencia", "location": "Valencia" },
+          { "name": "Zaragoza GAA", "location": "Zaragoza" },
+          { "name": "\u00c9ire \u00d3g Sevilla", "location": "Sevilla" },
+          { "name": "Celta M\u00e1laga", "location": "M\u00e1laga" },
+          { "name": "Costa Gaels, Marbella", "location": "Marbella" },
+          { "name": "Sitges", "location": "Sitges" },
+          { "name": "Independiente FC", "location": "Spain" }
+        ]
+      },
+      {
+        "country": "Portugal",
+        "flag": "\ud83c\uddf5\ud83c\uddf9",
+        "clubCount": 2,
+        "clubs": [
+          { "name": "LX Celtiberos GAA Club", "location": "Lisbon" },
+          { "name": "Porto Gaels", "location": "Porto" }
+        ]
+      },
+      {
+        "country": "Gibraltar",
+        "flag": "\ud83c\uddec\ud83c\uddee",
+        "clubCount": 1,
+        "clubs": [{ "name": "Gibraltar GAA", "location": "Gibraltar" }]
+      }
+    ],
+    "events": [
+      {
+        "title": "Liga Galega Feminina — Round 1",
+        "type": "FIXTURE",
+        "date": "2026-01-11",
+        "location": "Boiro",
+        "host": "Lorchos FG",
+        "sports": ["LGFA"],
+        "isMajor": false
+      },
+      {
+        "title": "Liga Galega Feminina — Round 2",
+        "type": "FIXTURE",
+        "date": "2026-01-17",
+        "location": "Various (Galicia)",
+        "host": "Multiple clubs",
+        "sports": ["LGFA"],
+        "isMajor": false
+      },
+      {
+        "title": "Iberia Championship — Gibraltar",
+        "type": "TOURNAMENT",
+        "date": "2026-02-07",
+        "location": "Gibraltar",
+        "host": "Gibraltar GAA",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Galicia National Team — Selection",
+        "type": "TOURNAMENT",
+        "date": "2026-02-14",
+        "location": "Galicia",
+        "host": "Keltoi Vigo",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Liga Galega Masculina — Round 1",
+        "type": "FIXTURE",
+        "date": "2026-02-21",
+        "location": "Various (Galicia)",
+        "host": "Multiple clubs",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Iberia — Barcelona v Madrid",
+        "type": "TOURNAMENT",
+        "date": "2026-02-28",
+        "location": "Barcelona",
+        "host": "Barcelona Gaels",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Andalucia Championship — Round 2",
+        "type": "TOURNAMENT",
+        "date": "2026-03-01",
+        "location": "Marbella",
+        "host": "Costa Gaels, Marbella",
+        "sports": ["Mens Football", "LGFA"],
+        "isMajor": false
+      },
+      {
+        "title": "Iberia Championship — Lisbon",
+        "type": "TOURNAMENT",
+        "date": "2026-03-07",
+        "location": "Lisbon",
+        "host": "LX Celtiberos GAA Club",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Celtic Cup 2026",
+        "type": "TOURNAMENT",
+        "date": "2026-03-14",
+        "location": "Galicia",
+        "host": "Keltoi Vigo",
+        "sports": [],
+        "isMajor": false
+      },
+      {
+        "title": "Galician Gaelic Schools Cup",
+        "type": "TOURNAMENT",
+        "date": "2026-03-28",
+        "location": "Galicia",
+        "host": "Keltoi Vigo",
+        "sports": ["Youth"],
+        "isMajor": false
+      },
+      {
+        "title": "Iberia Championship — Malaga",
+        "type": "TOURNAMENT",
+        "date": "2026-03-28",
+        "location": "Malaga",
+        "host": "Celta M\u00e1laga",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Iberia — Barcelona v Valencia",
+        "type": "TOURNAMENT",
+        "date": "2026-03-28",
+        "location": "Barcelona",
+        "host": "Barcelona Gaels",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Galician Cup",
+        "type": "TOURNAMENT",
+        "date": "2026-04-25",
+        "location": "Galicia",
+        "host": "Keltoi Vigo",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Iberian Championship Finals",
+        "type": "TOURNAMENT",
+        "date": "2026-05-09",
+        "location": "Salou",
+        "host": "Barcelona Gaels",
+        "sports": ["Mens Football", "LGFA"],
+        "isMajor": true
+      },
+      {
+        "title": "Liga Galega — Playoffs",
+        "type": "FIXTURE",
+        "date": "2026-05-16",
+        "location": "Various (Galicia)",
+        "host": "Multiple clubs",
+        "sports": ["Mens Football", "LGFA"],
+        "isMajor": true
+      },
+      {
+        "title": "Celtic Cup U-17",
+        "type": "TOURNAMENT",
+        "date": "2026-06-27",
+        "location": "Galicia",
+        "host": "Keltoi Vigo",
+        "sports": ["Youth", "Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Over 35s Tournament",
+        "type": "TOURNAMENT",
+        "date": "2026-06-27",
+        "location": "Galicia",
+        "host": "Keltoi Vigo",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "World Games 2026",
+        "type": "TOURNAMENT",
+        "date": "2026-07-13",
+        "location": "TBC",
+        "host": "Keltoi Vigo",
+        "sports": [],
+        "isMajor": true
+      },
+      {
+        "title": "Barcelona Gaels G4MO",
+        "type": "TOURNAMENT",
+        "date": "2026-10-10",
+        "location": "Barcelona",
+        "host": "Barcelona Gaels",
+        "sports": ["G4MO"],
+        "isMajor": false
+      }
+    ]
+  },
+  "nordics": {
+    "regionId": "nordics",
+    "name": "Nordics",
+    "kpis": {
+      "clubs": 16,
+      "calendarEvents": 4,
+      "tournaments": 4,
+      "countries": 5
+    },
+    "notes": [
+      "Sweden leads with 6 clubs across 4 cities",
+      "Full Nordic Football championship season: Apr\u2013Aug 2026",
+      "European Camogie/Hurling Championships hosted in Copenhagen"
+    ],
+    "spotlight": {
+      "title": "Viking Gaels \u2014 Copenhagen",
+      "accolade": "2025 Club of the Year",
+      "crest": "assets/viking-gaels-crest.png",
+      "description": "An amalgamation club based in Copenhagen that draws players from across the entire Nordic region. Viking Gaels have become a superpower in European competition, adding significant depth to the continental contest in both Camogie and Hurling. They are hosting Round 2 of the European Camogie/Hurling (9s) Championships in June 2026.",
+      "stats": [
+        "European Camogie & Hurling contenders",
+        "Pan-Nordic player base",
+        "Hosting European Championships Rd 2"
+      ]
+    },
+    "byCountry": [
+      {
+        "country": "Sweden",
+        "flag": "\ud83c\uddf8\ud83c\uddea",
+        "clubCount": 6,
+        "clubs": [
+          { "name": "Stockholm Gaels", "location": "Stockholm" },
+          { "name": "Gothenburg GAA", "location": "Gothenburg" },
+          { "name": "Malmo GAA", "location": "Malm\u00f6" },
+          { "name": "G\u00e4vle GAA", "location": "G\u00e4vle" },
+          { "name": "Sandviken GAA", "location": "Sandviken" },
+          { "name": "Lule\u00e5 Gaels", "location": "Lule\u00e5" }
+        ]
+      },
+      {
+        "country": "Denmark",
+        "flag": "\ud83c\udde9\ud83c\uddf0",
+        "clubCount": 5,
+        "clubs": [
+          { "name": "Copenhagen GAA", "location": "Copenhagen" },
+          { "name": "Viking Gaels", "location": "Copenhagen" },
+          { "name": "Aarhus GAA", "location": "Aarhus" },
+          { "name": "Odense GAA", "location": "Odense" },
+          { "name": "Hillerod", "location": "Hiller\u00f8d" }
+        ]
+      },
+      {
+        "country": "Finland",
+        "flag": "\ud83c\uddeb\ud83c\uddee",
+        "clubCount": 3,
+        "clubs": [
+          { "name": "Helsinki Harps", "location": "Helsinki" },
+          { "name": "Tampere Hammer Gaels", "location": "Tampere" },
+          { "name": "Oulu Irish Elks", "location": "Oulu" }
+        ]
+      },
+      {
+        "country": "Norway",
+        "flag": "\ud83c\uddf3\ud83c\uddf4",
+        "clubCount": 1,
+        "clubs": [{ "name": "Oslo GAA", "location": "Oslo" }]
+      },
+      {
+        "country": "Iceland",
+        "flag": "\ud83c\uddee\ud83c\uddf8",
+        "clubCount": 1,
+        "clubs": [
+          { "name": "Reykjav\u00edk Keltar GAA", "location": "Reykjavik" }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "title": "Nordic Gaelic Football \u2014 Round 1",
+        "type": "TOURNAMENT",
+        "date": "2026-04-25",
+        "location": "Copenhagen",
+        "host": "Copenhagen GAA",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "Nordic Gaelic Football \u2014 Round 2",
+        "type": "TOURNAMENT",
+        "date": "2026-05-16",
+        "location": "Aarhus",
+        "host": "Aarhus GAA",
+        "sports": ["Mens Football"],
+        "isMajor": false
+      },
+      {
+        "title": "European Camogie/Hurling (9s) Championships \u2014 Rd 2",
+        "type": "TOURNAMENT",
+        "date": "2026-06-06",
+        "location": "Copenhagen",
+        "host": "Viking Gaels",
+        "sports": ["Hurling", "Camogie"],
+        "isMajor": true
+      },
+      {
+        "title": "Nordic Gaelic Football \u2014 Final Round",
+        "type": "TOURNAMENT",
+        "date": "2026-08-22",
+        "location": "G\u00e4vle",
+        "host": "Malmo GAA",
+        "sports": ["Mens Football"],
+        "isMajor": true
+      }
+    ]
+  }
+}

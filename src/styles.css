@@ -1,0 +1,763 @@
+/* ─── Reset & Base ─────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* GGE Brand — derived from the main crest */
+  --navy: #0f1a2e;
+  --navy-mid: #1b2d4f;
+  --navy-light: #243b63;
+  --gold: #f5c518;
+  --gold-muted: #c9a80d;
+  --white: #f0f2f5;
+  --white-muted: #a0a8b8;
+  --border: #2a3d5c;
+
+  --fade-opacity: 0.1;
+  --transition-speed: 0.35s;
+}
+
+body {
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ─── Layout ──────────────────────────────────── */
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.map-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem 0 2rem 2rem;
+  position: relative;
+  background:
+    radial-gradient(
+      ellipse at 40% 50%,
+      rgba(27, 45, 79, 0.8) 0%,
+      transparent 70%
+    ),
+    var(--navy);
+}
+
+.map-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  background: linear-gradient(to right, transparent 0%, var(--navy-mid) 85%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* ─── Header ──────────────────────────────────── */
+.map-header {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.map-header .gge-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.map-header-text h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--white);
+}
+
+.map-header-text h1 span {
+  color: var(--gold);
+}
+
+.map-header-text p {
+  font-size: 0.75rem;
+  color: var(--white-muted);
+  margin-top: 0.15rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ─── SVG Map ─────────────────────────────────── */
+.europe-map {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+}
+
+.europe-map path {
+  fill: var(--navy-light);
+  stroke: var(--navy);
+  stroke-width: 0.5;
+  cursor: pointer;
+  transition:
+    opacity var(--transition-speed) ease,
+    fill var(--transition-speed) ease,
+    filter var(--transition-speed) ease;
+}
+
+/* Region group — keyboard focusable */
+.region-group {
+  outline: none;
+}
+
+.region-group:focus-visible path {
+  stroke-width: 1.5;
+  stroke: var(--gold);
+}
+
+/* ─── Interaction States ──────────────────────── */
+
+/* When ANY region is active, fade everything first */
+.map-has-active path {
+  opacity: var(--fade-opacity);
+  filter: blur(1.5px);
+}
+
+/* Then the active region's countries pop back */
+.region-group.active path {
+  opacity: 1;
+  filter: none;
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 1;
+}
+
+/* Non-GGE countries always stay faded when a region is active */
+.map-has-active .country-no-region {
+  opacity: 0.05;
+  filter: blur(2.5px);
+}
+
+/* ─── Factsheet Panel ─────────────────────────── */
+.factsheet {
+  width: clamp(380px, 30vw, 600px);
+  min-width: 380px;
+  background: var(--navy-mid);
+  border-left: none;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2.5rem;
+  transition: opacity var(--transition-speed) ease;
+  overflow-y: auto;
+}
+
+.factsheet-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--white-muted);
+  gap: 1.2rem;
+}
+
+.factsheet-empty .gge-logo-large {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  opacity: 0.6;
+}
+
+.factsheet-empty p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ─── Region Header in Panel ──────────────────── */
+.factsheet-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.region-crest {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.factsheet-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.factsheet-header .country-count {
+  font-size: 0.75rem;
+  color: var(--white-muted);
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ─── KPI Tiles ───────────────────────────────── */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-bottom: 1.6rem;
+}
+
+.kpi-tile {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem 0.7rem;
+  text-align: center;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.kpi-tile:hover {
+  border-color: rgba(245, 197, 24, 0.3);
+  background: rgba(245, 197, 24, 0.04);
+}
+
+.kpi-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+  color: var(--gold);
+}
+
+.kpi-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white-muted);
+}
+
+/* Full-width tile for the last odd one */
+.kpi-tile.full-width {
+  grid-column: 1 / -1;
+}
+
+/* ─── Notes / Highlights ──────────────────────── */
+.factsheet-notes {
+  margin-bottom: 1.6rem;
+}
+
+.factsheet-notes h3 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white-muted);
+  margin-bottom: 0.5rem;
+}
+
+.factsheet-notes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.factsheet-notes li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--white);
+}
+
+.factsheet-notes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+/* ─── Countries List ──────────────────────────── */
+.countries-list {
+  margin-bottom: 1.5rem;
+}
+
+.countries-list h3 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white-muted);
+  margin-bottom: 0.5rem;
+}
+
+.country-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.country-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  color: var(--white-muted);
+}
+
+/* ─── Spotlight (talking point) ────────────────── */
+.spotlight {
+  margin-bottom: 1.5rem;
+}
+
+.spotlight h3 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.spotlight-card {
+  background: rgba(245, 197, 24, 0.05);
+  border: 1px solid rgba(245, 197, 24, 0.2);
+  border-radius: 8px;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  margin-bottom: 0.5rem;
+}
+
+.spotlight-card:last-child {
+  margin-bottom: 0;
+}
+
+.spotlight-flag {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.spotlight-card:hover {
+  border-color: rgba(245, 197, 24, 0.4);
+}
+
+.spotlight-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.spotlight-crest {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.spotlight-accolade {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  font-weight: 700;
+  margin-top: 0.15rem;
+}
+
+.spotlight-expand-icon {
+  margin-left: auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white-muted);
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+}
+
+.spotlight-card:hover .spotlight-expand-icon {
+  color: var(--gold);
+}
+
+.spotlight-body {
+  overflow: hidden;
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 0.6rem;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    margin-top 0.3s ease;
+}
+
+.spotlight-body.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.spotlight-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.spotlight-desc {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--white-muted);
+}
+
+.spotlight-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.6rem;
+}
+
+.spotlight-stat {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: rgba(245, 197, 24, 0.12);
+  color: var(--gold);
+  border-radius: 3px;
+  padding: 0.15rem 0.4rem;
+  font-weight: 600;
+}
+
+/* ─── Events Timeline ─────────────────────────── */
+.events-timeline {
+  margin-bottom: 1.5rem;
+}
+
+.events-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.4rem 0;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+.events-header:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.events-header h3 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white-muted);
+  margin-bottom: 0.1rem;
+}
+
+.events-summary {
+  font-size: 0.75rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.events-expand-icon {
+  margin-left: auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white-muted);
+  flex-shrink: 0;
+  width: 1.2rem;
+  text-align: center;
+  transition: color 0.15s ease;
+}
+
+.events-header:hover .events-expand-icon {
+  color: var(--gold);
+}
+
+.events-list {
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.events-list.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.events-timeline h3 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white-muted);
+  margin-bottom: 0.7rem;
+}
+
+.event-card {
+  display: flex;
+  gap: 0.7rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.event-card:last-child {
+  border-bottom: none;
+}
+
+.event-card.event-major {
+  border-left: 2px solid var(--gold);
+  padding-left: 0.6rem;
+  margin-left: -0.6rem;
+}
+
+.event-date {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--gold);
+  white-space: nowrap;
+  min-width: 5rem;
+  line-height: 1.4;
+}
+
+.event-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.event-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.event-meta {
+  font-size: 0.68rem;
+  color: var(--white-muted);
+  margin-top: 0.15rem;
+}
+
+.event-sports {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.3rem;
+}
+
+.sport-tag {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: rgba(245, 197, 24, 0.1);
+  color: var(--gold);
+  border-radius: 3px;
+  padding: 0.1rem 0.35rem;
+  font-weight: 600;
+}
+
+/* ─── Country Breakdown (real data) ───────────── */
+.country-breakdown {
+  margin-bottom: 1.5rem;
+}
+
+.country-breakdown h3 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white-muted);
+  margin-bottom: 0.7rem;
+}
+
+.country-section {
+  margin-bottom: 0.8rem;
+}
+
+.country-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+.country-header:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.expand-icon {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--white-muted);
+  width: 1.2rem;
+  text-align: center;
+  transition: color 0.15s ease;
+}
+
+.country-header:hover .expand-icon {
+  color: var(--gold);
+}
+
+.country-flag {
+  font-size: 1rem;
+}
+
+.country-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--white);
+  flex: 1;
+}
+
+.country-club-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold);
+  background: rgba(245, 197, 24, 0.1);
+  border-radius: 10px;
+  padding: 0.1rem 0.5rem;
+}
+
+.club-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding-left: 1.6rem;
+  max-height: 200px;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease;
+  opacity: 1;
+}
+
+.club-list.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.club-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.7rem;
+  color: var(--white-muted);
+}
+
+/* ─── Footer ──────────────────────────────────── */
+.factsheet-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.65rem;
+  color: var(--white-muted);
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* ─── Legend (bottom-left of map) ─────────────── */
+.map-legend {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2rem;
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  color: var(--white-muted);
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 0.2rem 0;
+}
+
+.legend-item:hover {
+  color: var(--gold);
+}
+
+.legend-item.legend-locked {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.legend-item.legend-locked .legend-dot {
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: box-shadow 0.2s ease;
+}
+
+/* ─── Lock / Pin Badge ────────────────────────── */
+.lock-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+/* Cursor hint for clickable regions */
+.region-group {
+  cursor: pointer;
+}
+
+/* ─── Animations ──────────────────────────────── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.factsheet-content {
+  animation: fadeIn 0.3s ease;
+}
