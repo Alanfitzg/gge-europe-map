@@ -246,13 +246,13 @@
     "regionId": "central-east",
     "name": "Central East",
     "kpis": {
-      "clubs": 31,
+      "clubs": 30,
       "countries": 10,
       "calendarEvents": 15,
       "tournaments": 12
     },
     "notes": [
-      "Largest GGE region \u2014 31 clubs across 10 countries",
+      "Largest GGE region \u2014 30 clubs across 10 countries",
       "Germany leads with 12 clubs including 2 in Berlin",
       "Full Central East Football championship season: Apr\u2013Sep 2026",
       "European Camogie/Hurling Championships Rd 3 hosted in Vienna",
@@ -309,13 +309,12 @@
       {
         "country": "Switzerland",
         "flag": "\ud83c\udde8\ud83c\udded",
-        "clubCount": 5,
+        "clubCount": 4,
         "clubs": [
           { "name": "Zurich GAA", "location": "Zurich" },
           { "name": "Geneva Gaels", "location": "Geneva" },
           { "name": "Basel GAA", "location": "Basel" },
-          { "name": "Bern GAA", "location": "Bern" },
-          { "name": "Midland GAC", "location": "Switzerland" }
+          { "name": "Bern GAA", "location": "Bern" }
         ]
       },
       {
@@ -490,13 +489,13 @@
     "regionId": "france",
     "name": "France",
     "kpis": {
-      "clubs": 33,
+      "clubs": 30,
       "countries": 3,
       "calendarEvents": 37,
       "tournaments": 7
     },
     "notes": [
-      "33 clubs across France, Jersey & Guernsey",
+      "30 clubs across France, Jersey & Guernsey",
       "Full federal championship structure: D1, D2 Men's and Ladies",
       "Brittany runs its own regional league system (D1, D2/D3)",
       "Sports covered: Football, LGFA, Hurling, 15s, Handball",
@@ -531,7 +530,7 @@
       {
         "country": "France",
         "flag": "\ud83c\uddeb\ud83c\uddf7",
-        "clubCount": 31,
+        "clubCount": 28,
         "clubs": [
           { "name": "Paris Gaels", "location": "Paris" },
           { "name": "Rennes GAA – Ar Gwazi Gouez", "location": "Rennes" },
@@ -551,14 +550,9 @@
           { "name": "Poitiers Gaels", "location": "Poitiers" },
           { "name": "Gwenn Rann GAA", "location": "Brittany" },
           { "name": "St. Brieuc GAA", "location": "St. Brieuc" },
-          {
-            "name": "Gaelic Football Bro Sant Brieg",
-            "location": "Saint-Brieuc"
-          },
           { "name": "Brest GAA", "location": "Brest" },
           { "name": "Gwened Vannes", "location": "Vannes" },
           { "name": "Lorient GAC", "location": "Lorient" },
-          { "name": "Kerne Football Gaélique", "location": "Quimper" },
           { "name": "Kerne GAA", "location": "Quimper" },
           { "name": "Rosteren GAA", "location": "Brittany" },
           { "name": "Goélands Gaëlics St. Coulomb", "location": "St. Coulomb" },
@@ -566,7 +560,7 @@
           { "name": "Mondeville GAA", "location": "Mondeville" },
           { "name": "Gaelic Football Club d'Arthon", "location": "Arthon" },
           { "name": "Pas-en-Artois", "location": "Pas-en-Artois" },
-          { "name": "France GAA", "location": "France" }
+          { "name": "Tolosa Gaels", "location": "Toulouse" }
         ]
       },
       {
@@ -827,13 +821,13 @@
     "regionId": "iberia",
     "name": "Iberia",
     "kpis": {
-      "clubs": 31,
+      "clubs": 32,
       "countries": 3,
       "calendarEvents": 72,
       "tournaments": 10
     },
     "notes": [
-      "31 clubs across Spain, Portugal & Gibraltar",
+      "32 clubs across Spain, Portugal & Gibraltar",
       "Galicia runs a full Men's and Ladies league (Liga Galega) with ~14 clubs",
       "Iberia Championship circuit: Gibraltar, Lisbon, Malaga, Barcelona",
       "Galicia has its own national team selection and youth pathway",
@@ -868,7 +862,7 @@
       {
         "country": "Spain",
         "flag": "\ud83c\uddea\ud83c\uddf8",
-        "clubCount": 28,
+        "clubCount": 29,
         "clubs": [
           { "name": "Keltoi Vigo", "location": "Vigo" },
           { "name": "Fillos de Breog\u00e1n", "location": "A Coru\u00f1a" },
@@ -888,8 +882,7 @@
           { "name": "Ga\u00e9licos do Gran Sol", "location": "Barcelona" },
           { "name": "Madrid Harps GAA", "location": "Madrid" },
           { "name": "Celtic Tres Cantos", "location": "Madrid" },
-          { "name": "Tolosa Gaels", "location": "Basque Country" },
-          { "name": "St. Patrick's Gasteiz", "location": "Basque Country" },
+          { "name": "St. Patrick's Gasteiz", "location": "Vitoria-Gasteiz" },
           { "name": "Bilbao Gaels", "location": "Bilbao" },
           { "name": "San Vicent Valencia", "location": "Valencia" },
           { "name": "Zaragoza GAA", "location": "Zaragoza" },
@@ -897,7 +890,8 @@
           { "name": "Celta M\u00e1laga", "location": "M\u00e1laga" },
           { "name": "Costa Gaels, Marbella", "location": "Marbella" },
           { "name": "Sitges", "location": "Sitges" },
-          { "name": "Independiente FC", "location": "Spain" }
+          { "name": "Celtic Girona", "location": "Girona" },
+          { "name": "Independiente FC", "location": "Santiago de Compostela" }
         ]
       },
       {

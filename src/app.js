@@ -268,6 +268,7 @@ function activateRegion(regionId) {
   });
 
   renderFactsheet(regionId);
+  showClubDots(regionId);
 }
 
 function deactivateRegion() {
@@ -288,6 +289,7 @@ function deactivateRegion() {
   });
 
   renderFactsheetEmpty();
+  hideClubDots();
 }
 
 // ─── Factsheet Panel ─────────────────────────────
@@ -569,6 +571,206 @@ function renderFactsheetEmpty() {
 function fmt(n) {
   if (n == null) return "\u2014";
   return Number(n).toLocaleString();
+}
+
+// ─── Club Dots ───────────────────────────────────
+
+const CITY_LATLNG = {
+  // Nordics
+  Stockholm: [59.33, 18.07],
+  Gothenburg: [57.71, 11.97],
+  Malmö: [55.6, 13.0],
+  Gävle: [60.67, 17.15],
+  Sandviken: [60.62, 16.78],
+  Luleå: [65.58, 22.15],
+  Copenhagen: [55.68, 12.57],
+  Aarhus: [56.15, 10.22],
+  Odense: [55.4, 10.39],
+  Hillerød: [55.93, 12.31],
+  Helsinki: [60.17, 24.94],
+  Tampere: [61.5, 23.79],
+  Oulu: [65.01, 25.47],
+  Oslo: [59.91, 10.75],
+  Reykjavik: [64.15, -21.9],
+  // Benelux
+  Amsterdam: [52.37, 4.9],
+  Maastricht: [50.85, 5.69],
+  "The Hague": [52.08, 4.3],
+  Eindhoven: [51.44, 5.47],
+  Groningen: [53.22, 6.57],
+  Nijmegen: [51.84, 5.87],
+  Brussels: [50.85, 4.36],
+  Leuven: [50.88, 4.7],
+  Luxembourg: [49.61, 6.13],
+  Cologne: [50.94, 6.96],
+  Frankfurt: [50.11, 8.68],
+  Düsseldorf: [51.23, 6.77],
+  Aachen: [50.78, 6.08],
+  Darmstadt: [49.87, 8.65],
+  Hamburg: [53.55, 10.0],
+  // France
+  Paris: [48.86, 2.35],
+  Rennes: [48.11, -1.68],
+  Nantes: [47.22, -1.55],
+  Lyon: [45.76, 4.83],
+  Bordeaux: [44.84, -0.58],
+  Strasbourg: [48.57, 7.75],
+  Toulouse: [43.6, 1.44],
+  Lille: [50.63, 3.06],
+  Clermont: [45.78, 3.08],
+  Angers: [47.47, -0.56],
+  "Le Mans": [48.0, 0.2],
+  Montpellier: [43.61, 3.88],
+  Valbonne: [43.64, 7.01],
+  "Aix-en-Provence": [43.53, 5.44],
+  Niort: [46.32, -0.46],
+  Poitiers: [46.58, 0.34],
+  "St. Brieuc": [48.51, -2.76],
+  Brest: [48.39, -4.49],
+  Vannes: [47.66, -2.76],
+  Lorient: [47.75, -3.37],
+  Quimper: [48.0, -4.1],
+  "St. Coulomb": [48.67, -1.92],
+  Liffre: [48.21, -1.51],
+  Mondeville: [49.18, -0.33],
+  Arthon: [47.07, -1.72],
+  "Pas-en-Artois": [50.18, 2.47],
+  Brittany: [48.2, -3.0],
+  "Jersey, Channel Islands": [49.21, -2.13],
+  "Guernsey, Channel Islands": [49.45, -2.54],
+  // Iberia
+  Vigo: [42.23, -8.72],
+  "A Coruña": [43.37, -8.4],
+  Boqueixón: [42.78, -8.39],
+  Gondomar: [42.1, -8.77],
+  Boiro: [42.65, -8.88],
+  "A Guarda": [41.9, -8.87],
+  Poio: [42.44, -8.69],
+  Ourense: [42.34, -7.86],
+  Cambados: [42.51, -8.81],
+  Galicia: [42.5, -8.2],
+  Barcelona: [41.39, 2.17],
+  Madrid: [40.42, -3.7],
+  "Vitoria-Gasteiz": [42.85, -2.67],
+  Bilbao: [43.26, -2.93],
+  Valencia: [39.47, -0.38],
+  Zaragoza: [41.65, -0.88],
+  Sevilla: [37.39, -5.98],
+  Málaga: [36.72, -4.42],
+  Marbella: [36.51, -4.88],
+  Sitges: [41.24, 1.81],
+  Girona: [41.98, 2.82],
+  "Santiago de Compostela": [42.88, -8.54],
+  Lisbon: [38.72, -9.14],
+  Porto: [41.15, -8.61],
+  Gibraltar: [36.14, -5.35],
+  // Central East
+  Munich: [48.14, 11.58],
+  Berlin: [52.52, 13.4],
+  Stuttgart: [48.78, 9.18],
+  Dresden: [51.05, 13.74],
+  Augsburg: [48.37, 10.9],
+  Zurich: [47.38, 8.54],
+  Geneva: [46.2, 6.15],
+  Basel: [47.56, 7.59],
+  Bern: [46.95, 7.45],
+  Warsaw: [52.23, 21.01],
+  Wroclaw: [51.11, 17.04],
+  Bydgoszcz: [53.12, 18.01],
+  Olsztyn: [53.78, 20.48],
+  Milan: [45.46, 9.19],
+  Rome: [41.9, 12.5],
+  Vienna: [48.21, 16.37],
+  Salzburg: [47.8, 13.04],
+  Prague: [50.08, 14.44],
+  Strakonice: [49.26, 13.9],
+  Zagreb: [45.81, 15.98],
+  Budapest: [47.5, 19.04],
+  Tallinn: [59.44, 24.75],
+  Bratislava: [48.15, 17.11],
+  Switzerland: [46.82, 8.23],
+};
+
+const CITY_OVERRIDES = {
+  Reykjavik: { x: 45, y: 110 },
+};
+
+const DOT_COLOR = "#F5C518";
+
+function geoToSvg(lat, lng) {
+  const x = (22.07 - 0.1896 * lat) * lng + 68.51 + 1.931 * lat;
+  const latRad = (lat * Math.PI) / 180;
+  const mercY = Math.log(Math.tan(Math.PI / 4 + latRad / 2));
+  const y = -687.3 * mercY + 1132.5;
+  return { x, y };
+}
+
+function getCityCoords(location) {
+  if (CITY_OVERRIDES[location]) return CITY_OVERRIDES[location];
+  const ll = CITY_LATLNG[location];
+  if (!ll) return null;
+  return geoToSvg(ll[0], ll[1]);
+}
+
+function showClubDots(regionId) {
+  hideClubDots();
+  const svg = document.querySelector(".europe-map");
+  const stats = statsData[regionId];
+  if (!svg || !stats || !stats.byCountry) return;
+
+  const seen = new Set();
+  const cities = [];
+
+  stats.byCountry.forEach((country) => {
+    (country.clubs || []).forEach((club) => {
+      const loc = typeof club === "string" ? "" : club.location || "";
+      if (!loc) return;
+      const key = loc.toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+      cities.push({ name: club.name, location: loc });
+    });
+  });
+
+  const dotGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
+  dotGroup.classList.add("club-dots-group");
+  dotGroup.dataset.region = regionId;
+
+  const shuffled = cities.sort(() => Math.random() - 0.5);
+
+  shuffled.forEach((club, i) => {
+    const coords = getCityCoords(club.location);
+    if (!coords) {
+      console.warn("No coords for:", club.location);
+      return;
+    }
+
+    const circle = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "circle"
+    );
+    circle.classList.add("club-dot");
+    circle.setAttribute("cx", coords.x.toFixed(1));
+    circle.setAttribute("cy", coords.y.toFixed(1));
+    circle.setAttribute("r", "0");
+    circle.style.fill = DOT_COLOR;
+    circle.style.animationDelay = `${i * 60}ms`;
+
+    const title = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "title"
+    );
+    title.textContent = club.name;
+    circle.appendChild(title);
+
+    dotGroup.appendChild(circle);
+  });
+
+  svg.appendChild(dotGroup);
+}
+
+function hideClubDots() {
+  document.querySelectorAll(".club-dots-group").forEach((g) => g.remove());
 }
 
 // ─── Boot ────────────────────────────────────────
