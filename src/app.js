@@ -86,6 +86,43 @@ function initMap() {
     p.classList.add("country-no-region");
   });
 
+  // Western Germany overlay for Benelux (German clubs in NRW, Hessen, Hamburg)
+  const defs =
+    svg.querySelector("defs") ||
+    svg.insertBefore(
+      document.createElementNS("http://www.w3.org/2000/svg", "defs"),
+      svg.firstChild
+    );
+  const clip = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "clipPath"
+  );
+  clip.id = "clip-de-west";
+  const clipRect = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "rect"
+  );
+  clipRect.setAttribute("x", "0");
+  clipRect.setAttribute("y", "0");
+  clipRect.setAttribute("width", "295");
+  clipRect.setAttribute("height", "700");
+  clip.appendChild(clipRect);
+  defs.appendChild(clip);
+
+  const beneluxGroup = svg.querySelector(
+    '.region-group[data-region="benelux"]'
+  );
+  const dePaths = svg.querySelectorAll(
+    '.region-group[data-region="central-east"] path[data-iso2="DE"]'
+  );
+  dePaths.forEach((path) => {
+    const clone = path.cloneNode(true);
+    clone.removeAttribute("id");
+    clone.classList.add("region-overlay");
+    clone.setAttribute("clip-path", "url(#clip-de-west)");
+    beneluxGroup.appendChild(clone);
+  });
+
   svg.querySelectorAll(".region-group").forEach((group) => {
     const regionId = group.dataset.region;
 
@@ -165,7 +202,11 @@ function getRegionBBox(regionId) {
   const svg = document.querySelector(".europe-map");
   const group = svg.querySelector(`.region-group[data-region="${regionId}"]`);
   if (!group) return null;
-  return group.getBBox();
+  const overlays = group.querySelectorAll(".region-overlay");
+  overlays.forEach((el) => (el.style.display = "none"));
+  const bbox = group.getBBox();
+  overlays.forEach((el) => (el.style.display = ""));
+  return bbox;
 }
 
 function parseViewBox(vb) {
@@ -712,6 +753,9 @@ const CITY_OVERRIDES = {
   Gondomar: { x: 50, y: 574 },
   "A Guarda": { x: 49, y: 578 },
   Galicia: { x: 45, y: 554 },
+  // Portugal — coast projection lands dots on the edge
+  Lisbon: { x: 16, y: 628 },
+  Marbella: { x: 68, y: 660 },
 };
 
 const DOT_COLOR = "#F5C518";

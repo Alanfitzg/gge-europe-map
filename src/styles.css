@@ -155,6 +155,17 @@ body {
   filter: blur(2.5px);
 }
 
+/* Cross-region overlay (e.g. western Germany in Benelux) */
+.region-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.region-group.active .region-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* ─── Club Dots ──────────────────────────────── */
 .club-dot {
   fill: var(--gold);
