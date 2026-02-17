@@ -693,6 +693,25 @@ const CITY_LATLNG = {
 
 const CITY_OVERRIDES = {
   Reykjavik: { x: 45, y: 110 },
+  // France — Brittany coast (SVG peninsula narrower than reality)
+  Brest: { x: 109, y: 450 },
+  Quimper: { x: 113, y: 455 },
+  Lorient: { x: 123, y: 466 },
+  Vannes: { x: 130, y: 468 },
+  Brittany: { x: 119, y: 452 },
+  Arthon: { x: 140, y: 490 },
+  // Iberia — Galicia rias (SVG simplifies complex coastline)
+  "A Coruña": { x: 38, y: 551 },
+  "Santiago de Compostela": { x: 48, y: 557 },
+  Boqueixón: { x: 49, y: 560 },
+  Boiro: { x: 49, y: 563 },
+  Cambados: { x: 50, y: 565 },
+  Poio: { x: 51, y: 568 },
+  Ourense: { x: 57, y: 567 },
+  Vigo: { x: 52, y: 572 },
+  Gondomar: { x: 50, y: 574 },
+  "A Guarda": { x: 49, y: 578 },
+  Galicia: { x: 45, y: 554 },
 };
 
 const DOT_COLOR = "#F5C518";
